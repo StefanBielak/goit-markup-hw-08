@@ -1,0 +1,28 @@
+.client {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+.list {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  margin-bottom: 94px;
+  cursor: pointer;
+  gap: 30px;
+  justify-content: center;
+  padding-right: 15px;
+  &__logo{
+  fill: $icon-color1;
+  border: 1px solid $icon-color1;
+  border-radius: 4px;
+  &:hover,
+  &:focus,
+  &:active{
+  fill: $blue-color;
+  border-color: $blue-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  }
+}

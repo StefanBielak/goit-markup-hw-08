@@ -1,0 +1,48 @@
+$white-color: #ffffff;
+$black-color: #212121;
+$blue-color: #2196f3;
+$gray-color: #757575;
+$wall-color: #2f303a;
+$team-color: #f5f4fa;
+$navi-color: rgba(255, 255, 255, 0.6);
+$border-color: #ECECEC;
+$border-color2: #EEEEEE;
+$border-color3: rgba(255, 255, 255, 0.3);
+$background-icon: #F5F4FA;
+$icon-color2: #FFFFFF;
+$icon-color1: #AFB1B8;
+$icon-color3: rgba(255, 255, 255, 0.1);
+* {
+  margin: 0px;
+  padding: 0px;
+}
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.section {
+  padding-bottom: 94px;
+  &:last-of-type{
+  padding-bottom: 0px;
+  }
+  &:first-of-type{
+  padding-top:0px;
+  }
+  &__title{
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.16;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: $black-color;
+  margin-bottom: 50px;
+  }
+}
+body {
+  font-family: "Roboto", "sans-serif";
+  font-style: normal;
+  background: $icon-color2;
+}
+$font-family2: "Raleway";

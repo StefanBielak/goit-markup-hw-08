@@ -1,0 +1,102 @@
+.nav{
+  display: flex;
+  align-items: center;
+  padding-top: 32px;
+  padding-bottom: 32px;
+   justify-content: space-between;
+  &__logo{
+  font-family: $font-family2;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+  color: $black-color;
+  list-style-type: none;
+  text-decoration: none;  
+  &--blue{
+  color: $blue-color;
+  } 
+  }
+}
+.menu {
+  list-style-type: none;
+  display: flex;
+  gap: 46px;
+  &__link{
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  color: $wall-color;
+  &:hover,
+  &:focus{
+  color: $blue-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  &--activ{
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  color: $wall-color;
+  &:active{
+  color: $blue-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  &::after{
+  content: "";
+  display: block;
+  background-color: $blue-color;
+  height: 4px;
+  width: 100%;
+  border-radius: 2px;
+  position: relative;
+  top: 32px;
+  }
+  }
+  }
+}
+.contact {
+  list-style-type: none;
+  display: flex;
+  gap: 50px;
+  &__item{
+  display: flex;
+  gap: 10px;
+  }
+  &__icon{
+  display: flex;
+  fill: currentColor;
+  &:hover,
+  &:focus,
+  &:active{
+  fill: $blue-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); 
+  }
+  }
+  &__link{
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  color: $gray-color;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  &:hover,
+  &:focus,
+  &:active{
+  color: $blue-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  }
+}

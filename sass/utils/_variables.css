@@ -1,0 +1,36 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.section {
+  padding-bottom: 94px;
+}
+.section:last-of-type {
+  padding-bottom: 0px;
+}
+.section:first-of-type {
+  padding-top: 0px;
+}
+.section__title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.16;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: #212121;
+  margin-bottom: 50px;
+}
+
+body {
+  font-family: "Roboto", "sans-serif";
+  font-style: normal;
+  background: #FFFFFF;
+}/*# sourceMappingURL=vars.css.map */
