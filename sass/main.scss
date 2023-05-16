@@ -1,10 +1,84 @@
-@import "/utils/_variables.scss";
-@import "/components/_backdrop.scss";
-@import "/components/_bottom.scss";
-@import "/components/_client.scss";
-@import "/components/_face.scss";
-@import "/components/_navigation.scss";
-@import "/components/_offert.scss";
-@import "/components/_team.scss";
-@import "/components/_wall.scss";
-@import "/components/_work.scss";
+@import "./utils/vars";
+@import "./utils/global";
+@import "./components/mobile-menu";
+@import "./components/page-header";
+@import "./components/logo";
+@import "./components/hero";
+@import "./components/advantages";
+@import "./components/tender";
+@import "./components/team";
+@import "./components/client";
+@import "./components/footer";
+@import "./components/social-media";
+@import "./components/form";
+@import "./components/newsletter";
+@import "./components/backdrop";
+@import "./components/modal";
+@import "./components/menu-portfolio";
+@import "./components/card-portfolio";
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: $fontFamily;
+  color: $textColor;
+  background-color: $whiteColor;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.container--hidden {
+  display: none;
+}
+
+.list {
+  list-style-type: none;
+  // margin-bottom: 3.75rem;
+  gap: 1.875rem;
+}
+
+.section {
+  margin-top: 3.75rem;
+  margin-bottom: 3.75rem;
+}
+
+img {
+  vertical-align: middle;
+  display: block;
+  height: auto;
+  max-width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+
+  .container--hidden {
+    display: none;
+  }
+  .list {
+    list-style-type: none;
+    display: flex;
+    margin-bottom: 0;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .container {
+    max-width: 1200px;
+  }
+
+  .container--hidden {
+    display: block;
+  }
+}

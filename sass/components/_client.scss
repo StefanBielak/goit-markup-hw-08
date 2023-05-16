@@ -1,28 +1,41 @@
 .client {
-  display: flex;
-  text-align: center;
-  justify-content: center;
-}
-.list {
-  display: flex;
-  text-align: center;
-  justify-content: center;
-  margin-bottom: 94px;
-  cursor: pointer;
-  gap: 30px;
-  justify-content: center;
-  padding-right: 15px;
-  &__logo{
-  fill: $icon-color1;
-  border: 1px solid $icon-color1;
-  border-radius: 4px;
-  &:hover,
-  &:focus,
-  &:active{
-  fill: $blue-color;
-  border-color: $blue-color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  &__title {
+    @extend %title;
+    font-size: 1.75rem;
+    line-height: 1.18;
+    text-align: center;
+    padding-bottom: 1.875rem;
   }
+
+  &__box {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    fill: $iconColor;
+    justify-content: space-around;
+    gap: 1.875rem;
+  }
+
+  &__icon {
+    border: 1px solid $iconColor;
+    border-radius: 4px;
+    padding: 1rem 2rem;
+
+    &:hover,
+    &:focus,
+    &:active {
+      fill: $brandColor;
+      border: 1px solid $brandColor;
+      border-radius: 4px;
+      cursor: $cursor;
+    }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .client {
+    &__box {
+      flex-wrap: nowrap;
+    }
   }
 }

@@ -1,50 +1,114 @@
 .team {
-  background: $team-color;
-  font-size: 16px;
-  line-height: 1.9;
+  background-color: $backgrandColor;
   text-align: center;
-  letter-spacing: 0.03em;
-  text-decoration: none;
-  padding-top: 94px;
-  padding-bottom: 94px;
-  color: $gray-color;
-  &__list{
-  list-style-type: none;
-  display: flex;
-  gap: 30px;
+
+  &__title {
+    @extend %title;
+    font-size: 1.75rem;
+    line-height: 1.18;
+    text-align: center;
+    padding-top: 3.75rem;
+    padding-bottom: 1.875rem;
+    margin: 0;
   }
-  &__item{
-  background: $white-color;
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
-  border-radius: 0px 0px 4px 4px; 
+  &__flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-direction: column;
+    list-style-type: none;
+    margin-bottom: 3.75rem;
+    gap: 1.875rem;
   }
-  &__member{
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.9;
-  color: $gray-color;
+
+  &__card {
+    background-color: $whiteColor;
+    box-shadow: $boxShadow;
+    border-radius: 0px 0px 0.25rem 0.25rem;
   }
-  &__text{
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 19px;
-  color: $gray-color;
-  margin-bottom: 30px;
+
+  &__name {
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 1.18;
+    letter-spacing: 0.03em;
+    color: $textColor;
+    justify-content: center;
+    margin-top: 1.875rem;
+    margin-bottom: 0.625rem;
+  }
+
+  &__job {
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.18;
+    letter-spacing: 0.03em;
+    color: $paragraphColor;
+    margin-bottom: 1rem;
+  }
+
+  &__box {
+    @extend %box;
+    justify-content: center;
+  }
+
+  &__icon {
+    fill: $iconColor;
+    border-radius: 50%;
+    background-color: $backgrandIcon;
+    cursor: $cursor;
+    margin-bottom: 1.5rem;
   }
 }
-.social {
-  display: flex;
-  gap: 10px;
-  fill: $icon-color1;
-  justify-content: center;
-  margin-top: 16px;
-  margin-bottom: 30px;
-  cursor: pointer;
-  &__icon:hover{
-  fill: $white-color;
-  background-color: $blue-color;
-  border-radius: 50%;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+@media screen and (min-width: 768px) {
+  .team {
+    padding-bottom: 1.875rem;
+
+    &__flex {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      list-style-type: none;
+      margin-bottom: 0;
+      gap: 0;
+    }
+
+    &__card {
+      margin-bottom: 1.875rem;
+    }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .team {
+    padding-bottom: 5.875rem;
+
+    &__title {
+      font-size: 2.25rem;
+      line-height: 1.16;
+      padding-top: 5.875rem;
+      padding-bottom: 3.125rem;
+      margin: 0;
+    }
+
+    &__icon {
+      fill: $whiteColor;
+      margin-bottom: 0;
+
+      &:hover,
+      &:focus,
+      &:active {
+        fill: $whiteColor;
+        background-color: $brandColor;
+      }
+    }
+
+    &__flex {
+      flex-wrap: nowrap;
+      gap: 1.875rem;
+    }
   }
 }

@@ -1,0 +1,105 @@
+.menu-container {
+  position: fixed;
+  opacity: 0;
+  background-color: $whiteColor;
+  transform: translateX(100%);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  visibility: hidden;
+  inset: 0;
+  padding: 48px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.menu-toggle {
+  cursor: $cursor;
+  border: none;
+  background-color: $whiteColor;
+  width: auto;
+
+  &__icon {
+    &:hover,
+    &:focus,
+    &:active {
+      fill: $brandColor;
+    }
+  }
+}
+.menu-box {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+}
+.is-open {
+  transform: translateX(0);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  opacity: 1;
+  visibility: visible;
+}
+
+.mobile-menu {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+  flex-direction: column;
+
+  &__link {
+    text-decoration: none;
+    color: $textColor;
+    letter-spacing: 0.02em;
+    font-size: 2.5rem;
+    line-height: 2.93rem;
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: $brandColor;
+    }
+  }
+  &__phone {
+    text-decoration: none;
+    color: $brandColor;
+    letter-spacing: 0.02em;
+    font-size: 2.12rem;
+    line-height: 2.5rem;
+  }
+
+  &__email {
+    text-decoration: none;
+    color: $paragraphColor;
+    letter-spacing: 0.02em;
+    font-size: 1.5rem;
+    line-height: 1.75rem;
+  }
+
+  &__social {
+    list-style: none;
+    margin-right: 0.625rem;
+    display: flex;
+    flex-wrap: wrap;
+
+    &__link {
+      text-decoration: none;
+      color: $brandColor;
+      letter-spacing: 0.02em;
+      font-size: 1.125rem;
+      line-height: 1.22;
+      border-right: 1px solid rgba(33, 33, 33, 0.2);
+      padding-right: 0.625rem;
+      padding-left: 0.625rem;
+    }
+    &__link--first {
+      padding-left: 0;
+    }
+    &__link--last {
+      border-right: none;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .menu-toggle {
+    display: none;
+  }
+}

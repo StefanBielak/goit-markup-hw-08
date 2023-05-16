@@ -1,0 +1,72 @@
+.advantages {
+  display: flex;
+  align-items: center;
+
+  &__title {
+    @extend %title;
+    margin-bottom: 0.625rem;
+    padding: 0;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  &__text {
+    color: $paragraphColor;
+    font-size: 0.875rem;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+  }
+
+  &__icon {
+    text-align: center;
+    padding-top: 1.56rem;
+    padding-bottom: 1.56rem;
+    margin-bottom: 1.875rem;
+    margin-top: 1.875rem;
+    background-color: $backgrandColor;
+    border-radius: 4px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .advantages {
+    &__box {
+      flex-direction: row;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    &__container {
+      max-width: 22rem;
+    }
+
+    &__title {
+      text-align: left;
+    }
+
+    &__text {
+      text-align: left;
+    }
+
+    &__icon {
+      padding: 1.56rem 8.875rem;
+    }
+  }
+}
+@media screen and (min-width: 1200px) {
+  .advantages {
+    &__title {
+      @extend %title;
+      margin-bottom: 10px;
+      padding: 0;
+    }
+
+    &__box {
+      flex-wrap: nowrap;
+    }
+
+    &__icon {
+      padding: 1.56rem 0;
+    }
+  }
+}
